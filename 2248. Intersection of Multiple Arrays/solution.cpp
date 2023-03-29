@@ -9,6 +9,9 @@ public:
         */
 
         unordered_map<int, int> dic;
+        
+        //it's much better when you define a variable to record the size of the nums
+        int n = nums.size();
 
         for(int i = 0; i < nums.size(); ++i)
         {
@@ -33,7 +36,7 @@ public:
         for(auto[key, value]: dic)
         {
             // if the key has repeatef nums.size() times, then we will keep the value.
-            if(value == nums.size())
+            if(value == n)
             {
                 collection_of_common_element.push_back(key);
             }
